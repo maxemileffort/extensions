@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Transcript Automator</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f0f0f0; /* Light gray background */
+      padding: 10px;
+    }
+    button {
+      background-color: #FFC107; /* TailorJD yellow */
+      color: #333; /* Dark gray text */
+      border: none;
+      padding: 8px 16px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 14px;
+      margin-top: 10px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    button:hover {
+      background-color: #FFA000; /* Slightly darker yellow on hover */
+    }
+    #status {
+      margin-top: 10px;
+      font-weight: bold;
+      color: #333; /* Dark gray text */
+    }
+    #transcriptSample, #output {
+      white-space: pre-wrap;
+      margin-top: 10px;
+      max-height: 200px;
+      overflow-y: auto;
+      border: 1px solid #ccc;
+      padding: 5px;
+      background-color: #fff; /* White background for content areas */
+      color: #333; /* Dark gray text */
+    }
+  </style>
+</head>
+<body>
+  <button id="runScript">Get Transcript</button>
+  <button id="copyButton">Copy to Clipboard</button>
+  <button id="summarizeButton" style="display: none;">Summarize</button>
+  <div id="status"></div>
+  <div id="transcriptSample"></div>
+  <div id="output"></div>
+  <script src="popup.js"></script>
+</body>
+</html>

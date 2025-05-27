@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+    "name": "Transcript Automator",
+    "version": "1.0",
+    "description": "Automates clicks and retrieves cleaned transcript text.",
+    "permissions": [
+      "scripting",
+      "activeTab",
+      "storage"
+    ],
+    "host_permissions": [
+      "*://*.youtube.com/*",
+      "*://*.linkedin.com/*"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "options_ui": {
+      "page": "options.html",
+      "open_in_tab": true
+    }
+  }
