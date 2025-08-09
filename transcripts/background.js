@@ -18,7 +18,7 @@ chrome.runtime.onMessage.addListener(async (request, sender, sendResponse) => {
                 return;
             }
 
-            const model = 'gemini-2.5-flash-preview-04-17';
+            const model = 'gemini-2.5-flash-preview-05-20';
             const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
             const prompt = `Summarize the following text:\n\n${transcript}`;
 
