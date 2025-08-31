@@ -1,0 +1,60 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>YouTube HTML Inspector</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="app__header">
+      <h1>YouTube HTML Inspector</h1>
+      <p class="app__sub">Fetch and pretty-print raw HTML (displayed as text, not rendered)</p>
+    </header>
+
+    <form id="form" class="controls" autocomplete="off">
+      <label for="urlInput" class="sr-only">YouTube URL</label>
+      <input
+        id="urlInput"
+        name="url"
+        type="url"
+        inputmode="url"
+        placeholder="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        required
+        spellcheck="false"
+        autofocus
+      />
+      <div class="btn-row">
+        <button id="fetchBtn" class="btn btn--primary" type="submit">Fetch HTML</button>
+        <button id="clearBtn" class="btn" type="button">Clear</button>
+        <button id="copyBtn" class="btn" type="button">Copy Output</button>
+        <label class="chk">
+          <input type="checkbox" id="indent2" checked />
+          <span>2-space indent</span>
+        </label>
+      </div>
+    </form>
+
+    <div id="status" class="status" role="status" aria-live="polite"></div>
+
+    <section class="output-wrap">
+      <div class="output-toolbar">
+        <span class="tag">RAW</span>
+        <span class="sep">•</span>
+        <span class="tag">ESCAPED</span>
+        <span class="sep">•</span>
+        <span id="bytes" class="bytes">0 bytes</span>
+      </div>
+      <pre id="output" class="output" tabindex="0"></pre>
+    </section>
+
+    <footer class="app__footer">
+      <small>Vanilla JS • CORS-friendly in Chrome Extension context (see manifest below)</small>
+    </footer>
+  </main>
+
+  <script src="./app.js" defer></script>
+</body>
+</html>
