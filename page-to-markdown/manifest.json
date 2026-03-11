@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Page to Markdown",
+  "version": "1.0",
+  "description": "Save any webpage as a clean Markdown file for AI context.",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "downloads"
+  ]
+}

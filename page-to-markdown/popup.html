@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Page to Markdown</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f0f0f0;
+      padding: 16px;
+      width: 260px;
+      margin: 0;
+    }
+    h1 {
+      font-size: 14px;
+      font-weight: 600;
+      color: #333;
+      margin: 0 0 12px 0;
+    }
+    button {
+      background-color: #1a73e8;
+      color: #fff;
+      border: none;
+      padding: 10px 16px;
+      font-size: 14px;
+      width: 100%;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    button:hover {
+      background-color: #1557b0;
+    }
+    button:disabled {
+      background-color: #9ab4d8;
+      cursor: not-allowed;
+    }
+    #status {
+      margin-top: 10px;
+      font-size: 12px;
+      color: #555;
+      min-height: 18px;
+      word-break: break-all;
+    }
+    #status.error {
+      color: #c62828;
+    }
+  </style>
+</head>
+<body>
+  <h1>Page to Markdown</h1>
+  <button id="saveBtn">Save as Markdown</button>
+  <div id="status"></div>
+  <script src="popup.js"></script>
+</body>
+</html>
